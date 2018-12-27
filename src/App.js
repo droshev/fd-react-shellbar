@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Shellbar } from 'fundamental-react/dist/Shellbar/Shellbar';
+import './App.scss';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    profile1 = {
+        initials: 'JS',
+        userName: 'John Snow',
+        colorAccent: 8,
+    };
+
+    profileMenu = [
+        { name: 'Settings', glyph: 'action-settings', size: 's', callback: () => alert('Settings selected!') },
+        { name: 'Sign Out', glyph: 'log', size: 's', callback: () => alert('Sign Out selected!') },
+    ];
+
+    render() {
+        return (
+            <Shellbar
+                logo={<img src='//unpkg.com/fiori-fundamentals/dist/images/sap-logo.png' alt='SAP' />}
+                productTitle='Corporate Portal'
+                profile={this.profile1}
+                profileMenu={this.profileMenu}
+            />
+        );
+    }
 }
 
 export default App;
