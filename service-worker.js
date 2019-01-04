@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/droshev/fd-react-shellbar/precache-manifest.7eff3d58fd0870ef7b0321c65ec128a4.js"
+  "/fd-react-shellbar/precache-manifest.ee70f5d0920dcb95820a14234ab97b0b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/droshev/fd-react-shellbar/index.html", {
+workbox.routing.registerNavigationRoute("/fd-react-shellbar/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
